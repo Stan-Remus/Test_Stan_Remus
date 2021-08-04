@@ -1,0 +1,185 @@
+$input-color: #5fa8d3;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 48em;
+    width: 34em;
+    border-radius: .5em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+form{
+    height: 12em;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    input{
+        margin: .5em;
+        
+    }
+}
+.username{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    input{
+        width: 100%;
+        height: 100%;
+        color: #595f6e;
+        padding-top: 20px;
+        border: none;
+        outline: none;
+    }
+    label{
+        position: absolute;
+        bottom: -.5em;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        // background-color: aqua;
+        pointer-events: none;
+        border-bottom: 1px solid black;
+    }
+    label::after{
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -1px;
+        height: 100%;
+        width: 100%;
+        border-bottom: 3px solid $input-color;
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+    }
+    .content-name{
+        position: absolute;
+        bottom: 5px;
+        left: 0px;
+        transition: all 0.3s ease;
+    }
+    input:focus +label .content-name, input:valid + label .content-name{
+        transform: translateY(-150%);
+        font-size: 14px;
+        color: $input-color;
+    }
+    input:focus + label::after, .form input:valid + label::after{
+        transform: translateX(0%);
+    }
+}
+.password{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    margin-top: 1em;
+    input{
+        width: 100%;
+        height: 100%;
+        color: #595f6e;
+        padding-top: 20px;
+        border: none;
+        outline: none;
+    }
+    label{
+        position: absolute;
+        bottom: -.5em;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        // background-color: aqua;
+        pointer-events: none;
+        border-bottom: 1px solid black;
+    }
+    label::after{
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -1px;
+        height: 100%;
+        width: 100%;
+        border-bottom: 3px solid #5fa8d3;
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+    }
+    .content-name{
+        position: absolute;
+        bottom: 5px;
+        left: 0px;
+        transition: all 0.3s ease;
+    }
+    input:focus +label .content-name, input:valid + label .content-name{
+        transform: translateY(-150%);
+        font-size: 14px;
+        color: #5fa8d3;
+    }
+    input:focus + label::after, .form input:valid + label::after{
+        transform: translateX(0%);
+    }
+}
+.buttons{
+    margin-top: 1em;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    button{
+        width: 100%;
+    }
+}
+
+//Social media buttons
+.media{
+    margin-top: 4em;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    button{
+        margin-top: 1em;
+        width: 100%;
+    }
+}
+.log{
+    margin-right: 1em;
+    color: white;
+}
+.fb{
+    color: white;
+    background-color: #3B5998 !important;
+}
+.go{
+    color: white !important;
+    background-color: #dd4b39 !important;
+}
+.text{
+    margin-top: 3em;
+    font-weight: bold;
+    span{
+        color: #0275d8;
+    }
+    span:hover{
+        cursor: pointer;
+    }
+}
+
+
+//font-family: 'Roboto', sans-serif;
