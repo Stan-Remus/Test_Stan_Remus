@@ -1,5 +1,8 @@
 $input-color: #5fa8d3;
 
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -15,12 +18,11 @@ body{
 .card{
     height: 48em;
     width: 34em;
-    border-radius: .5em;
+    border-radius: 2em;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     }
 form{
     height: 12em;
@@ -165,10 +167,16 @@ form{
 .fb{
     color: white;
     background-color: #3B5998 !important;
+    &:hover{
+        background-color: #566a96 !important;
+    }
 }
 .go{
     color: white !important;
     background-color: #dd4b39 !important;
+    &:hover{
+        background-color: #db6556 !important;
+    }
 }
 .text{
     margin-top: 3em;
@@ -181,5 +189,15 @@ form{
     }
 }
 
+@media only screen and (max-height: 840px) {
+    .card{
+        height: 40em;
+        width: 30em;
+        }
+    .title{
+        font-size: 2em;
+        margin-top: 0.5em;
+    }
+  }
 
 //font-family: 'Roboto', sans-serif;
